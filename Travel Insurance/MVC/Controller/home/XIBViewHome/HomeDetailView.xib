@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="IKv-zu-SKq" customClass="HomeDetailView" customModule="Hamraa_Insurance" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgZ-PU-74W">
+                    <rect key="frame" x="11" y="9" width="371" height="7"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlr-ao-3tA">
+                            <rect key="frame" x="17" y="-5" width="320" height="17"/>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTH-lf-FbK">
+                            <rect key="frame" x="0.0" y="6" width="371" height="1"/>
+                            <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="st0-ya-j0a"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 1" translatesAutoresizingMaskIntoConstraints="NO" id="ecH-BE-bNV">
+                            <rect key="frame" x="347" y="-1.333333333333333" width="10" height="10"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="10" id="LNJ-D3-Pt7"/>
+                                <constraint firstAttribute="width" constant="10" id="mjD-bQ-Ak3"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="NTH-lf-FbK" secondAttribute="trailing" id="2Bk-BJ-cHX"/>
+                        <constraint firstItem="NTH-lf-FbK" firstAttribute="leading" secondItem="YgZ-PU-74W" secondAttribute="leading" id="Hjy-GF-dtK"/>
+                        <constraint firstItem="ecH-BE-bNV" firstAttribute="centerY" secondItem="YgZ-PU-74W" secondAttribute="centerY" id="VPH-am-IY1"/>
+                        <constraint firstItem="jlr-ao-3tA" firstAttribute="centerY" secondItem="YgZ-PU-74W" secondAttribute="centerY" id="Vy1-n9-jNf"/>
+                        <constraint firstItem="jlr-ao-3tA" firstAttribute="leading" secondItem="YgZ-PU-74W" secondAttribute="leading" constant="17" id="hSF-RR-1Fg"/>
+                        <constraint firstAttribute="trailing" secondItem="ecH-BE-bNV" secondAttribute="trailing" constant="14" id="jJ8-4n-aks"/>
+                        <constraint firstAttribute="bottom" secondItem="NTH-lf-FbK" secondAttribute="bottom" id="rHM-vu-oqY"/>
+                        <constraint firstItem="ecH-BE-bNV" firstAttribute="leading" secondItem="jlr-ao-3tA" secondAttribute="trailing" constant="10" id="xol-kU-uNB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="JUX-i3-4eR"/>
+            <constraints>
+                <constraint firstItem="JUX-i3-4eR" firstAttribute="bottom" secondItem="YgZ-PU-74W" secondAttribute="bottom" id="LOx-GG-LiW"/>
+                <constraint firstItem="YgZ-PU-74W" firstAttribute="top" secondItem="IKv-zu-SKq" secondAttribute="top" constant="9" id="nz9-Fh-Bqq"/>
+                <constraint firstItem="YgZ-PU-74W" firstAttribute="leading" secondItem="IKv-zu-SKq" secondAttribute="leading" constant="11" id="sHw-KR-CEq"/>
+                <constraint firstItem="JUX-i3-4eR" firstAttribute="trailing" secondItem="YgZ-PU-74W" secondAttribute="trailing" constant="11" id="u00-yq-Apr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imgArrow" destination="ecH-BE-bNV" id="Yzv-77-6Sg"/>
+                <outlet property="lblName" destination="jlr-ao-3tA" id="cG8-6j-qny"/>
+                <outlet property="viewMain" destination="YgZ-PU-74W" id="OaT-X8-EoC"/>
+            </connections>
+            <point key="canvasLocation" x="-34" y="-42"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Vector 1" width="40" height="20"/>
+    </resources>
+</document>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="headerView" id="Hd7-tc-RHo" customClass="headerView" customModule="Hamraa_Insurance" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4j-RS-m89">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traveler 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaq-jj-JXe">
+                            <rect key="frame" x="11" y="0.0" width="364" height="50"/>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="zaq-jj-JXe" firstAttribute="leading" secondItem="w4j-RS-m89" secondAttribute="leading" constant="11" id="2iN-b5-RFz"/>
+                        <constraint firstItem="zaq-jj-JXe" firstAttribute="top" secondItem="w4j-RS-m89" secondAttribute="top" id="47f-eF-8gD"/>
+                        <constraint firstAttribute="bottom" secondItem="zaq-jj-JXe" secondAttribute="bottom" id="5Mo-Vp-WvK"/>
+                        <constraint firstAttribute="trailing" secondItem="zaq-jj-JXe" secondAttribute="trailing" id="Jrg-Am-Ixp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="taL-l7-NHA"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="w4j-RS-m89" firstAttribute="leading" secondItem="Hd7-tc-RHo" secondAttribute="leading" id="Z0Z-Ag-sAJ"/>
+                <constraint firstAttribute="trailing" secondItem="w4j-RS-m89" secondAttribute="trailing" id="a74-jP-rot"/>
+                <constraint firstItem="w4j-RS-m89" firstAttribute="top" secondItem="Hd7-tc-RHo" secondAttribute="top" id="cMa-Ao-Apw"/>
+                <constraint firstAttribute="bottom" secondItem="w4j-RS-m89" secondAttribute="bottom" id="kmJ-CG-PL2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblPerson" destination="zaq-jj-JXe" id="bCr-ud-RLZ"/>
+            </connections>
+            <point key="canvasLocation" x="486" y="-120"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ClaimTblViewCell" id="KGk-i7-Jjw" customClass="ClaimTblViewCell" customModule="Hamraa_Insurance" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1U3-VR-ez5">
+                        <rect key="frame" x="213" y="2" width="83" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Claim Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frN-wk-Ngy">
+                                <rect key="frame" x="10" y="8" width="63" height="14"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="10"/>
+                                <color key="textColor" red="0.87843137250000003" green="1" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="393-Xf-pRN">
+                                <rect key="frame" x="0.0" y="0.0" width="83" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="8"/>
+                                <color key="tintColor" red="0.93333333330000001" green="0.1137254902" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="claimClickedAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0ob-Tu-yU6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.1137254902" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="frN-wk-Ngy" firstAttribute="centerX" secondItem="1U3-VR-ez5" secondAttribute="centerX" id="8Lr-Of-DsQ"/>
+                            <constraint firstItem="frN-wk-Ngy" firstAttribute="leading" secondItem="1U3-VR-ez5" secondAttribute="leading" constant="10" id="HlK-eu-ezD"/>
+                            <constraint firstAttribute="height" constant="30" id="Ku3-eU-mRs"/>
+                            <constraint firstAttribute="trailing" secondItem="frN-wk-Ngy" secondAttribute="trailing" constant="10" id="MBx-1L-hOq"/>
+                            <constraint firstItem="393-Xf-pRN" firstAttribute="leading" secondItem="1U3-VR-ez5" secondAttribute="leading" id="hKO-oW-KyU"/>
+                            <constraint firstItem="frN-wk-Ngy" firstAttribute="centerY" secondItem="1U3-VR-ez5" secondAttribute="centerY" id="iJJ-9c-eF3"/>
+                            <constraint firstAttribute="trailing" secondItem="393-Xf-pRN" secondAttribute="trailing" id="pTp-Eb-7AD"/>
+                            <constraint firstItem="393-Xf-pRN" firstAttribute="top" secondItem="1U3-VR-ez5" secondAttribute="top" id="wsQ-1U-dsQ"/>
+                            <constraint firstAttribute="bottom" secondItem="393-Xf-pRN" secondAttribute="bottom" id="zbH-gN-9Nf"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Passport ID No." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yA-i2-zzc">
+                        <rect key="frame" x="198.33333333333334" y="13" width="97.666666666666657" height="19"/>
+                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="4yA-i2-zzc" secondAttribute="trailing" constant="24" id="0rL-Zm-mXE"/>
+                    <constraint firstItem="1U3-VR-ez5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="EJm-te-O7B"/>
+                    <constraint firstAttribute="trailing" secondItem="1U3-VR-ez5" secondAttribute="trailing" constant="24" id="M10-xB-RCU"/>
+                    <constraint firstItem="4yA-i2-zzc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YUi-zN-fyv"/>
+                    <constraint firstAttribute="bottom" secondItem="1U3-VR-ez5" secondAttribute="bottom" constant="2" id="n3Q-sH-ZZg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblStatus" destination="4yA-i2-zzc" id="Svu-pz-2Fp"/>
+                <outlet property="viewClaim" destination="1U3-VR-ez5" id="S3n-xc-bl2"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="-32.394366197183103"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_Hamraa_Insurance_Travel_InsuranceUITests {
+  umbrella header "Pods-Hamraa Insurance-Travel InsuranceUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

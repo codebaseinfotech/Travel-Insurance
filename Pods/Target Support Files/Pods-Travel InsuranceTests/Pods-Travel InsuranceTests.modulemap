@@ -1,0 +1,6 @@
+framework module Pods_Travel_InsuranceTests {
+  umbrella header "Pods-Travel InsuranceTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

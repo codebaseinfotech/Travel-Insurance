@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VehicleUploadPhotoTblViewCell" id="KGk-i7-Jjw" customClass="VehicleUploadPhotoTblViewCell" customModule="Hamraa_Insurance" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tQ-ky-oyJ" customClass="RectangularDashedView" customModule="Hamraa_Insurance" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="5" width="320" height="120"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UJm-fa-L8p">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nej-7M-9e1">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="GFO-XG-QDA">
+                                                <rect key="frame" x="44.000000000000014" y="22" width="232.33333333333337" height="65.666666666666671"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_vehicleDocument" translatesAutoresizingMaskIntoConstraints="NO" id="yRx-z8-aWf">
+                                                        <rect key="frame" x="94.666666666666657" y="0.0" width="43" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="43" id="N0o-2y-8wr"/>
+                                                            <constraint firstAttribute="height" constant="43" id="c3o-6g-Hbh"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload live photos or video of vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgu-R1-013">
+                                                        <rect key="frame" x="0.0" y="50" width="232.33333333333334" height="15.666666666666671"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="orR-57-35b">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfQ-B0-CTh">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="btnUploadPhotoAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="48H-WJ-miA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="orR-57-35b" firstAttribute="top" secondItem="Nej-7M-9e1" secondAttribute="top" id="0Za-CS-Xdm"/>
+                                            <constraint firstAttribute="bottom" secondItem="vfQ-B0-CTh" secondAttribute="bottom" id="7vp-fa-sLf"/>
+                                            <constraint firstItem="vfQ-B0-CTh" firstAttribute="top" secondItem="Nej-7M-9e1" secondAttribute="top" id="IbX-fR-r4g"/>
+                                            <constraint firstItem="vfQ-B0-CTh" firstAttribute="leading" secondItem="Nej-7M-9e1" secondAttribute="leading" id="Zb6-o4-59m"/>
+                                            <constraint firstAttribute="trailing" secondItem="vfQ-B0-CTh" secondAttribute="trailing" id="euG-ds-Msj"/>
+                                            <constraint firstAttribute="bottom" secondItem="orR-57-35b" secondAttribute="bottom" id="mjy-2O-2bd"/>
+                                            <constraint firstItem="GFO-XG-QDA" firstAttribute="top" secondItem="Nej-7M-9e1" secondAttribute="top" constant="22" id="qVB-NP-SJy"/>
+                                            <constraint firstItem="GFO-XG-QDA" firstAttribute="centerX" secondItem="Nej-7M-9e1" secondAttribute="centerX" id="x73-9D-5AV"/>
+                                            <constraint firstItem="orR-57-35b" firstAttribute="leading" secondItem="Nej-7M-9e1" secondAttribute="leading" id="xly-K1-xrS"/>
+                                            <constraint firstAttribute="trailing" secondItem="orR-57-35b" secondAttribute="trailing" id="zco-Vk-tg0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="uploadPicVehicle"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UJm-fa-L8p" secondAttribute="trailing" id="Dfr-jC-A0X"/>
+                            <constraint firstAttribute="height" constant="120" id="bs5-BK-lJY"/>
+                            <constraint firstAttribute="bottom" secondItem="UJm-fa-L8p" secondAttribute="bottom" id="dyw-3c-NQV"/>
+                            <constraint firstItem="UJm-fa-L8p" firstAttribute="top" secondItem="4tQ-ky-oyJ" secondAttribute="top" id="iSj-pp-1y3"/>
+                            <constraint firstItem="UJm-fa-L8p" firstAttribute="leading" secondItem="4tQ-ky-oyJ" secondAttribute="leading" id="lOg-I8-JXT"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="dashWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="dashLength">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="dashColor">
+                                <color key="value" name="dash_color"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="betweenDashesSpace">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4tQ-ky-oyJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Qz5-1Y-tQl"/>
+                    <constraint firstAttribute="trailing" secondItem="4tQ-ky-oyJ" secondAttribute="trailing" id="TJc-ii-Mws"/>
+                    <constraint firstAttribute="bottom" secondItem="4tQ-ky-oyJ" secondAttribute="bottom" constant="5" id="p7X-25-x6W"/>
+                    <constraint firstItem="4tQ-ky-oyJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="udC-hJ-Tkr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imgPicVehicle" destination="orR-57-35b" id="1d7-9j-jZ1"/>
+                <outlet property="stackViewUploadImg" destination="GFO-XG-QDA" id="Qeg-cS-dW1"/>
+            </connections>
+            <point key="canvasLocation" x="-3" y="-1"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_vehicleDocument" width="175" height="174"/>
+        <namedColor name="dash_color">
+            <color red="0.24313725490196078" green="0.54117647058823526" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="uploadPicVehicle">
+            <color red="0.97254901960784312" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
