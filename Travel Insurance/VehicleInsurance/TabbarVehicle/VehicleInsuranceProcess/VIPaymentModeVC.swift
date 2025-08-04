@@ -46,10 +46,10 @@ class VIPaymentModeVC: UIViewController {
     }
     @IBAction func btnPayNowAction(_ sender: Any) {
         myImageUploadRequest(imgKey: "")
-//        let vc = VIPaymentSuccessVC.instantiate("Vehicle") as! VIPaymentSuccessVC
-//        vc.modalPresentationStyle = .overFullScreen
-//        vc.callAPI = true
-//        self.present(vc, animated: true)
+        let vc = VIPaymentSuccessVC.instantiate("Vehicle") as! VIPaymentSuccessVC
+        vc.modalPresentationStyle = .overFullScreen
+        vc.callAPI = true
+        self.present(vc, animated: true)
     }
     @IBAction func btnAddNewCard(_ sender: Any) {
         btnAddNewCardAction(self)
@@ -58,7 +58,7 @@ class VIPaymentModeVC: UIViewController {
     // MARK: - calling API -
     func myImageUploadRequest(imgKey: String) {
         
-        APIClient.sharedInstance.showIndicator()
+//        APIClient.sharedInstance.showIndicator()
         
         let token = UserDefaults.standard.value(forKey: "token") as? String
         
@@ -87,8 +87,8 @@ class VIPaymentModeVC: UIViewController {
         let email = AppManger.email
         let dail_code = AppManger.dail_code
         let phone_no = AppManger.phone_no
-        let dob = AppManger.dob
-        let policy_start_date = AppManger.policy_start_date
+        let dob = AppManger.dob.toDisplayDate()
+        let policy_start_date = AppManger.policy_start_date.toDisplayDate()
         let txn_id = AppManger.txn_id
         let txn_data = AppManger.txn_data
         let duration = "\(AppManger.duration)"
@@ -154,14 +154,20 @@ class VIPaymentModeVC: UIViewController {
                 if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any] {
                     
                     // try to read out a string array
-                    if var status = json["status"] as? Int
+                    if let status = json["status"] as? Int
                     {
                         if status == 1
                         {
+                            let data = json["data"] as? NSDictionary
+                            let dicData = TIVehicleInsuranceData(fromDictionary: data!)
                             let message = json["message"] as? String ?? ""
                             print(message)
                             DispatchQueue.main.async {
-                               
+                                let vc = VIPaymentSuccessVC.instantiate("Vehicle") as! VIPaymentSuccessVC
+                                vc.modalPresentationStyle = .overFullScreen
+                                vc.callAPI = false
+                                vc.dicResponse = dicData
+                                self.present(vc, animated: false)
                             }
                         }
                         else

@@ -32,6 +32,8 @@ class VIPaymentSuccessVC: UIViewController {
     var isCliamRequest = false
     var callAPI = false
     
+    var dicResponse = TIVehicleInsuranceData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +44,11 @@ class VIPaymentSuccessVC: UIViewController {
         } else {
             viewPaymentSuccess.isHidden = false
             viewPaymentProcess.isHidden = true
+            
+            lblPolicyNumber.text = dicResponse.policyId ?? ""
+            lblInsuredName.text = dicResponse.name ?? ""
+            lblTotalPremium.text = "IQD \(dicResponse.totalPremium ?? "")"
+            lblPolicyDate.text = dicResponse.policyStartDate ?? ""
         }
         
         if isCliamRequest == true {
@@ -79,7 +86,9 @@ class VIPaymentSuccessVC: UIViewController {
         if isCliamRequest == true {
             
         } else {
-            appDelegate?.setUpHomeVehicle()
+//            appDelegate?.setUpHomeVehicle()
+            let vc = VehicleMyInsuranceVC.instantiate("Vehicle") as! VehicleMyInsuranceVC
+            self.navigationController?.pushViewController(vc, animated: false)
         }
     }
     

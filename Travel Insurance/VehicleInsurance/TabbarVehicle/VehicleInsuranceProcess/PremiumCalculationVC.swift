@@ -46,7 +46,7 @@ class PremiumCalculationVC: UIViewController {
         
         let param = [
             "model_year": "\(appManger.model_year)",
-            "vehicle_type": "\(appManger.vehicle_type)",
+            "vehicle_type": "\(appManger.vehicle_plan_id)",
             "vehicle_value": "\(appManger.vehicle_value)"
         ]
         

@@ -29,8 +29,8 @@ class AppManger {
     var vehicle_model: String = ""
     var model_year: String = ""
     var registration_date: String = ""
-    var fuel_type: String = ""
-    var color: String = ""
+    var fuel_type: String = "petrol"
+    var color: String = "black"
     var engine_no: String = ""
     var chassis_no: String = ""
     var engine_size: Int = 0
@@ -55,8 +55,8 @@ class AppManger {
     var addOnPrices: [Int] = []
     
     // Transaction
-    var txn_id: String = ""
-    var txn_data: String = ""
+    var txn_id: String = "12"
+    var txn_data: String = "23"
     
     // Policy duration
     var duration: Int = 0

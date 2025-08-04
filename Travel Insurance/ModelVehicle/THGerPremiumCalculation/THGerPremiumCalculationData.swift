@@ -9,9 +9,9 @@ class THGerPremiumCalculationData : NSObject, NSCoding{
 
 	var agencyRepair : Float!
 	var baseRate : Float!
-	var idvAmount : Int!
+	var idvAmount : Double!
 	var postClaimAmount : Int!
-	var premiumAmount : Int!
+    var premiumAmount : Double!
 	var totalRate : Float!
 	var vehicleAge : Int!
 	var vehiclePlan : THGerPremiumCalculationVehiclePlan!
@@ -40,9 +40,9 @@ class THGerPremiumCalculationData : NSObject, NSCoding{
 	{
 		agencyRepair = dictionary["agency_repair"] as? Float == nil ? 0 : dictionary["agency_repair"] as? Float
 		baseRate = dictionary["base_rate"] as? Float == nil ? 0 : dictionary["base_rate"] as? Float
-		idvAmount = dictionary["idv_amount"] as? Int == nil ? 0 : dictionary["idv_amount"] as? Int
+		idvAmount = dictionary["idv_amount"] as? Double == nil ? 0 : dictionary["idv_amount"] as? Double
 		postClaimAmount = dictionary["post_claim_amount"] as? Int == nil ? 0 : dictionary["post_claim_amount"] as? Int
-		premiumAmount = dictionary["premium_amount"] as? Int == nil ? 0 : dictionary["premium_amount"] as? Int
+		premiumAmount = dictionary["premium_amount"] as? Double == nil ? 0 : dictionary["premium_amount"] as? Double
 		totalRate = dictionary["total_rate"] as? Float == nil ? 0 : dictionary["total_rate"] as? Float
 		vehicleAge = dictionary["vehicle_age"] as? Int == nil ? 0 : dictionary["vehicle_age"] as? Int
 		if let vehiclePlanData = dictionary["vehicle_plan"] as? NSDictionary{
@@ -99,9 +99,9 @@ class THGerPremiumCalculationData : NSObject, NSCoding{
 	{
          agencyRepair = aDecoder.decodeObject(forKey: "agency_repair") as? Float
          baseRate = aDecoder.decodeObject(forKey: "base_rate") as? Float
-         idvAmount = aDecoder.decodeObject(forKey: "idv_amount") as? Int
+         idvAmount = aDecoder.decodeObject(forKey: "idv_amount") as? Double
          postClaimAmount = aDecoder.decodeObject(forKey: "post_claim_amount") as? Int
-         premiumAmount = aDecoder.decodeObject(forKey: "premium_amount") as? Int
+         premiumAmount = aDecoder.decodeObject(forKey: "premium_amount") as? Double
          totalRate = aDecoder.decodeObject(forKey: "total_rate") as? Float
          vehicleAge = aDecoder.decodeObject(forKey: "vehicle_age") as? Int
          vehiclePlan = aDecoder.decodeObject(forKey: "vehicle_plan") as? THGerPremiumCalculationVehiclePlan

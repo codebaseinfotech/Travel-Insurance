@@ -202,3 +202,21 @@ extension Identifiable {
 }
 
 
+
+extension String {
+    /// Converts date from "yyyy-MM-dd" to "dd-MM-yyyy" format.
+    func toDisplayDate() -> String {
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd"
+        inputFormatter.locale = Locale(identifier: "en_US_POSIX")
+        
+        let outputFormatter = DateFormatter()
+        outputFormatter.dateFormat = "dd-MM-yyyy"
+        outputFormatter.locale = Locale(identifier: "en_US_POSIX")
+        
+        if let date = inputFormatter.date(from: self) {
+            return outputFormatter.string(from: date)
+        }
+        return self // return original if format fails
+    }
+}
