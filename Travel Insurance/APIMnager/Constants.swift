@@ -115,6 +115,11 @@ let GET_PREMIUM_CALCULATION = "get-premium-calculation"
 let GET_BRAND = "get-brand/bike?"
 
 let VEHICLE_INSURANCE = "vehicle-insurance"
+
+let MY_VEHICLE_INSURANCE = "my-vehicle-insurance"
+
+let MY_VEHICLE_INSURANCE_DETAILS = "vehicle-insurance-details"
+
 // **********************************************************************
 
 let appDelegate = UIApplication.shared.delegate as? AppDelegate

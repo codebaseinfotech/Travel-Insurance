@@ -44,6 +44,21 @@
 		398C428C2C5A4A8000C8E9D3 /* TIPolicyDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398C42852C5A4A8000C8E9D3 /* TIPolicyDetailResponse.swift */; };
 		398C428D2C5A4A8000C8E9D3 /* TIPolicyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398C42862C5A4A8000C8E9D3 /* TIPolicyDetail.swift */; };
 		398C428E2C5A4A8000C8E9D3 /* TIPolicyDetailPlanTypeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398C42872C5A4A8000C8E9D3 /* TIPolicyDetailPlanTypeCategory.swift */; };
+		39B9C3772E40B09500B5D10E /* TIMyVehicleInsuranceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C36E2E40B09500B5D10E /* TIMyVehicleInsuranceResponse.swift */; };
+		39B9C3782E40B09500B5D10E /* TIMyVehicleInsuranceVehicleInsuranceOptionalAddOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C3752E40B09500B5D10E /* TIMyVehicleInsuranceVehicleInsuranceOptionalAddOn.swift */; };
+		39B9C3792E40B09500B5D10E /* TIMyVehicleInsurancePlanTypeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C36D2E40B09500B5D10E /* TIMyVehicleInsurancePlanTypeCategory.swift */; };
+		39B9C37A2E40B09500B5D10E /* TIMyVehicleInsuranceUserinsurance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C3712E40B09500B5D10E /* TIMyVehicleInsuranceUserinsurance.swift */; };
+		39B9C37B2E40B09500B5D10E /* TIMyVehicleInsuranceVehicleClaim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C3742E40B09500B5D10E /* TIMyVehicleInsuranceVehicleClaim.swift */; };
+		39B9C37C2E40B09500B5D10E /* TIMyVehicleInsuranceVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C3732E40B09500B5D10E /* TIMyVehicleInsuranceVehicle.swift */; };
+		39B9C37D2E40B09500B5D10E /* TIMyVehicleInsuranceUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C3702E40B09500B5D10E /* TIMyVehicleInsuranceUser.swift */; };
+		39B9C37E2E40B09500B5D10E /* TIMyVehicleInsuranceTransectionStatu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C36F2E40B09500B5D10E /* TIMyVehicleInsuranceTransectionStatu.swift */; };
+		39B9C37F2E40B09500B5D10E /* TIMyVehicleInsuranceUserOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C3722E40B09500B5D10E /* TIMyVehicleInsuranceUserOrder.swift */; };
+		39B9C3802E40B09500B5D10E /* TIMyVehicleInsuranceCurrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C36B2E40B09500B5D10E /* TIMyVehicleInsuranceCurrent.swift */; };
+		39B9C3812E40B09500B5D10E /* TIMyVehicleInsurance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C3692E40B09500B5D10E /* TIMyVehicleInsurance.swift */; };
+		39B9C3822E40B09500B5D10E /* TIMyVehicleInsurancePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C36C2E40B09500B5D10E /* TIMyVehicleInsurancePlan.swift */; };
+		39B9C3832E40B09500B5D10E /* TIMyVehicleInsuranceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C36A2E40B09500B5D10E /* TIMyVehicleInsuranceCategory.swift */; };
+		39B9C3872E40BD0000B5D10E /* TIVehicleInsuranceDetialsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C3852E40BD0000B5D10E /* TIVehicleInsuranceDetialsData.swift */; };
+		39B9C3882E40BD0000B5D10E /* TIVehicleInsuranceDetials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9C3842E40BD0000B5D10E /* TIVehicleInsuranceDetials.swift */; };
 		39C736A02C97F30F00745D6A /* ipworks3ds_sdk.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC50B7A92C92FEF9009397AA /* ipworks3ds_sdk.xcframework */; };
 		39C736A12C97F30F00745D6A /* ipworks3ds_sdk.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC50B7A92C92FEF9009397AA /* ipworks3ds_sdk.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		39C736A22C97F3C000745D6A /* OPPWAMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC20C7582C94640900355D37 /* OPPWAMobile.xcframework */; };
@@ -302,6 +317,21 @@
 		398C42852C5A4A8000C8E9D3 /* TIPolicyDetailResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TIPolicyDetailResponse.swift; sourceTree = "<group>"; };
 		398C42862C5A4A8000C8E9D3 /* TIPolicyDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TIPolicyDetail.swift; sourceTree = "<group>"; };
 		398C42872C5A4A8000C8E9D3 /* TIPolicyDetailPlanTypeCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TIPolicyDetailPlanTypeCategory.swift; sourceTree = "<group>"; };
+		39B9C3692E40B09500B5D10E /* TIMyVehicleInsurance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsurance.swift; sourceTree = "<group>"; };
+		39B9C36A2E40B09500B5D10E /* TIMyVehicleInsuranceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsuranceCategory.swift; sourceTree = "<group>"; };
+		39B9C36B2E40B09500B5D10E /* TIMyVehicleInsuranceCurrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsuranceCurrent.swift; sourceTree = "<group>"; };
+		39B9C36C2E40B09500B5D10E /* TIMyVehicleInsurancePlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsurancePlan.swift; sourceTree = "<group>"; };
+		39B9C36D2E40B09500B5D10E /* TIMyVehicleInsurancePlanTypeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsurancePlanTypeCategory.swift; sourceTree = "<group>"; };
+		39B9C36E2E40B09500B5D10E /* TIMyVehicleInsuranceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsuranceResponse.swift; sourceTree = "<group>"; };
+		39B9C36F2E40B09500B5D10E /* TIMyVehicleInsuranceTransectionStatu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsuranceTransectionStatu.swift; sourceTree = "<group>"; };
+		39B9C3702E40B09500B5D10E /* TIMyVehicleInsuranceUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsuranceUser.swift; sourceTree = "<group>"; };
+		39B9C3712E40B09500B5D10E /* TIMyVehicleInsuranceUserinsurance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsuranceUserinsurance.swift; sourceTree = "<group>"; };
+		39B9C3722E40B09500B5D10E /* TIMyVehicleInsuranceUserOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsuranceUserOrder.swift; sourceTree = "<group>"; };
+		39B9C3732E40B09500B5D10E /* TIMyVehicleInsuranceVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsuranceVehicle.swift; sourceTree = "<group>"; };
+		39B9C3742E40B09500B5D10E /* TIMyVehicleInsuranceVehicleClaim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsuranceVehicleClaim.swift; sourceTree = "<group>"; };
+		39B9C3752E40B09500B5D10E /* TIMyVehicleInsuranceVehicleInsuranceOptionalAddOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIMyVehicleInsuranceVehicleInsuranceOptionalAddOn.swift; sourceTree = "<group>"; };
+		39B9C3842E40BD0000B5D10E /* TIVehicleInsuranceDetials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIVehicleInsuranceDetials.swift; sourceTree = "<group>"; };
+		39B9C3852E40BD0000B5D10E /* TIVehicleInsuranceDetialsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIVehicleInsuranceDetialsData.swift; sourceTree = "<group>"; };
 		39CC61ED2C577B9000A8FB16 /* HomeTopPopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopPopVC.swift; sourceTree = "<group>"; };
 		39CC61F72C57970800A8FB16 /* TIPlanDetailsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TIPlanDetailsResponse.swift; sourceTree = "<group>"; };
 		39CC61F82C57970800A8FB16 /* TIPlanDetailsPlanTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TIPlanDetailsPlanTitle.swift; sourceTree = "<group>"; };
@@ -619,11 +649,42 @@
 		39B8BEA12E3233C500B65823 /* ModelVehicle */ = {
 			isa = PBXGroup;
 			children = (
+				39B9C3862E40BD0000B5D10E /* TIVehicleInsuranceDetials */,
+				39B9C3762E40B09500B5D10E /* TIMyVehicleInsurance */,
 				39E3B29B2E407E4F0083AA19 /* THGerPremiumCalculation */,
 				395ABE572E32529D004973E3 /* THGetBrand */,
 				39E3B2A22E4092A10083AA19 /* TIVehicleInsurance */,
 			);
 			path = ModelVehicle;
+			sourceTree = "<group>";
+		};
+		39B9C3762E40B09500B5D10E /* TIMyVehicleInsurance */ = {
+			isa = PBXGroup;
+			children = (
+				39B9C3692E40B09500B5D10E /* TIMyVehicleInsurance.swift */,
+				39B9C36A2E40B09500B5D10E /* TIMyVehicleInsuranceCategory.swift */,
+				39B9C36B2E40B09500B5D10E /* TIMyVehicleInsuranceCurrent.swift */,
+				39B9C36C2E40B09500B5D10E /* TIMyVehicleInsurancePlan.swift */,
+				39B9C36D2E40B09500B5D10E /* TIMyVehicleInsurancePlanTypeCategory.swift */,
+				39B9C36E2E40B09500B5D10E /* TIMyVehicleInsuranceResponse.swift */,
+				39B9C36F2E40B09500B5D10E /* TIMyVehicleInsuranceTransectionStatu.swift */,
+				39B9C3702E40B09500B5D10E /* TIMyVehicleInsuranceUser.swift */,
+				39B9C3712E40B09500B5D10E /* TIMyVehicleInsuranceUserinsurance.swift */,
+				39B9C3722E40B09500B5D10E /* TIMyVehicleInsuranceUserOrder.swift */,
+				39B9C3732E40B09500B5D10E /* TIMyVehicleInsuranceVehicle.swift */,
+				39B9C3742E40B09500B5D10E /* TIMyVehicleInsuranceVehicleClaim.swift */,
+				39B9C3752E40B09500B5D10E /* TIMyVehicleInsuranceVehicleInsuranceOptionalAddOn.swift */,
+			);
+			path = TIMyVehicleInsurance;
+			sourceTree = "<group>";
+		};
+		39B9C3862E40BD0000B5D10E /* TIVehicleInsuranceDetials */ = {
+			isa = PBXGroup;
+			children = (
+				39B9C3842E40BD0000B5D10E /* TIVehicleInsuranceDetials.swift */,
+				39B9C3852E40BD0000B5D10E /* TIVehicleInsuranceDetialsData.swift */,
+			);
+			path = TIVehicleInsuranceDetials;
 			sourceTree = "<group>";
 		};
 		39CC61F62C57970800A8FB16 /* TIPlanDetails */ = {
@@ -1730,6 +1791,19 @@
 				88038D852AEA7E9700D6712E /* CreateNewPasswordVC.swift in Sources */,
 				BC0176E62D6C84C900E262A0 /* TIModifyDetail.swift in Sources */,
 				BC0176E72D6C84C900E262A0 /* TIModifyDetailCurrentPolicy.swift in Sources */,
+				39B9C3772E40B09500B5D10E /* TIMyVehicleInsuranceResponse.swift in Sources */,
+				39B9C3782E40B09500B5D10E /* TIMyVehicleInsuranceVehicleInsuranceOptionalAddOn.swift in Sources */,
+				39B9C3792E40B09500B5D10E /* TIMyVehicleInsurancePlanTypeCategory.swift in Sources */,
+				39B9C37A2E40B09500B5D10E /* TIMyVehicleInsuranceUserinsurance.swift in Sources */,
+				39B9C37B2E40B09500B5D10E /* TIMyVehicleInsuranceVehicleClaim.swift in Sources */,
+				39B9C37C2E40B09500B5D10E /* TIMyVehicleInsuranceVehicle.swift in Sources */,
+				39B9C37D2E40B09500B5D10E /* TIMyVehicleInsuranceUser.swift in Sources */,
+				39B9C37E2E40B09500B5D10E /* TIMyVehicleInsuranceTransectionStatu.swift in Sources */,
+				39B9C37F2E40B09500B5D10E /* TIMyVehicleInsuranceUserOrder.swift in Sources */,
+				39B9C3802E40B09500B5D10E /* TIMyVehicleInsuranceCurrent.swift in Sources */,
+				39B9C3812E40B09500B5D10E /* TIMyVehicleInsurance.swift in Sources */,
+				39B9C3822E40B09500B5D10E /* TIMyVehicleInsurancePlan.swift in Sources */,
+				39B9C3832E40B09500B5D10E /* TIMyVehicleInsuranceCategory.swift in Sources */,
 				BC9445ED2DF2B36E00574806 /* VIMyEndrosementDetailsVC.swift in Sources */,
 				BC0176E82D6C84C900E262A0 /* TIModifyDetailData.swift in Sources */,
 				BC0A01402DF16AF800A0B965 /* VehicleInsuranceTblViewCell.swift in Sources */,
@@ -1759,6 +1833,8 @@
 				880777202B50EEE1003F723C /* APIClient.swift in Sources */,
 				39CC61FF2C57970900A8FB16 /* TIPlanDetails.swift in Sources */,
 				880A136C2B872EDA008F6504 /* ITPolicyResponse.swift in Sources */,
+				39B9C3872E40BD0000B5D10E /* TIVehicleInsuranceDetialsData.swift in Sources */,
+				39B9C3882E40BD0000B5D10E /* TIVehicleInsuranceDetials.swift in Sources */,
 				189DBE2A2BA99B4E00E57264 /* MakePayment1VC.swift in Sources */,
 				39CC62122C57AB5000A8FB16 /* TICountryCodeResponse.swift in Sources */,
 				39CC61FD2C57970900A8FB16 /* TIPlanDetailsResponse.swift in Sources */,

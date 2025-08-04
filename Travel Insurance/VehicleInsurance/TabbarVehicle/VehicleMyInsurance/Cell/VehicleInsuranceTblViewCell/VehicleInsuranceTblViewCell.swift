@@ -44,6 +44,9 @@ class VehicleInsuranceTblViewCell: UITableViewCell {
     
     var tapOnClaimTrack: (()->Void)?
     var tapOnCancelPolicy: (()->Void)?
+    
+    var arrAddons: [TIMyVehicleInsuranceVehicleInsuranceOptionalAddOn] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         viewBikeDetials.isHidden = true
@@ -79,12 +82,15 @@ class VehicleInsuranceTblViewCell: UITableViewCell {
 // MARK: - tblView Delegate & DataSource
 extension VehicleInsuranceTblViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return arrAddons.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VehiicleAddOnsTblViewCell") as! VehiicleAddOnsTblViewCell
         
+        let dicData = arrAddons[indexPath.row]
+        cell.lblName.text = "(IQD \(dicData.price ?? ""))"
+
         return cell
     }
     

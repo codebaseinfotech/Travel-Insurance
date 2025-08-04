@@ -78,7 +78,12 @@ class APIClient: NSObject {
             
             let headers: HTTPHeaders = ["Authorization": "Bearer \(token ?? "")"]
             
-            AF.request(BASE_URL + url, method:.post, parameters: parameters,encoding: URLEncoding(destination: .methodDependent), headers: headers) .responseJSON { (response) in
+            let rawString = BASE_URL + url
+            
+            let cleanedString = rawString.trimmingCharacters(in: .whitespacesAndNewlines)
+                .components(separatedBy: .controlCharacters).joined()
+            
+            AF.request(cleanedString, method:.post, parameters: parameters,encoding: URLEncoding(destination: .methodDependent), headers: headers) .responseJSON { (response) in
                 
                 switch(response.result) {
                     
@@ -102,6 +107,7 @@ class APIClient: NSObject {
             SVProgressHUD.dismiss()
         }
     }
+    
     
     func MakeAPICallWithAuthHeaderPostPaymentGetway(_ url: String, parameters: [String: Any], completionHandler:@escaping (NSDictionary?, Error?, Int?) -> Void) {
         
