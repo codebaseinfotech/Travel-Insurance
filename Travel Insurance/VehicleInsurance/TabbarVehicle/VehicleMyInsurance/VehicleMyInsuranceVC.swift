@@ -300,6 +300,7 @@ extension VehicleMyInsuranceVC: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.tapOnCancelPolicy = {
                     let vc = VICancelPolicyVC.instantiate("Vehicle") as! VICancelPolicyVC
+                    vc.vehicle_insurance_id = dicData.id ?? 0
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 cell.tapOnViewDetails = {
@@ -376,6 +377,7 @@ extension VehicleMyInsuranceVC: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.tapOnCancelPolicy = {
                     let vc = VICancelPolicyVC.instantiate("Vehicle") as! VICancelPolicyVC
+                    vc.vehicle_insurance_id = dicData.id ?? 0
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -440,6 +442,7 @@ extension VehicleMyInsuranceVC: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.tapOnCancelPolicy = {
                     let vc = VICancelPolicyVC.instantiate("Vehicle") as! VICancelPolicyVC
+                    vc.vehicle_insurance_id = dicData.id ?? 0
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
@@ -509,6 +512,7 @@ extension VehicleMyInsuranceVC: UITableViewDelegate, UITableViewDataSource {
             
             cell.tapOnCancelPolicy = {
                 let vc = VICancelPolicyVC.instantiate("Vehicle") as! VICancelPolicyVC
+                vc.vehicle_insurance_id = dicData.id ?? 0
                 self.navigationController?.pushViewController(vc, animated: true)
             }
             

@@ -10263,6 +10263,7 @@ one to make payments easier.</string>
                         <outlet property="lblcardPolicyNumber" destination="XIP-Jb-Vw5" id="gtW-hr-Cu2"/>
                         <outlet property="viewBikeDetails" destination="BUG-I6-Gl4" id="7bX-Gz-9Zh"/>
                         <outlet property="viewCarDetails" destination="pTp-BJ-KdU" id="Bpi-dI-4RO"/>
+                        <outlet property="viewClaimRequest" destination="Sqn-YS-XWP" id="o4d-uy-8mk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Z1-kZ-N1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

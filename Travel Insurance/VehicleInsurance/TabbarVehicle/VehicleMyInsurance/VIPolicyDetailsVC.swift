@@ -30,6 +30,11 @@ class VIPolicyDetailsVC: UIViewController {
     @IBOutlet weak var lblPolicyNumber: UILabel!
     @IBOutlet weak var lblIssueDate: UILabel!
     @IBOutlet weak var lblValidTill: UILabel!
+    @IBOutlet weak var viewClaimRequest: UIView! {
+        didSet {
+            viewClaimRequest.isHidden = true
+        }
+    }
     
     var planId = 0
     
@@ -89,6 +94,9 @@ class VIPolicyDetailsVC: UIViewController {
                                 self.viewCarDetails.isHidden = false
                                 self.viewBikeDetails.isHidden = true
                             }
+                            
+                            self.viewClaimRequest.isHidden = dicData.claimStatus != "" && dicData.cancelReason == "" ? false : true
+                            
                             self.lblCarName.text = "\(dicData.vehicleModel ?? "") (\(dicData.engineSize ?? "") cc)"
                             self.lblBikeName.text = "\(dicData.vehicleModel ?? "") (\(dicData.engineSize ?? "") cc)"
                             self.lblCarNumber.text = "\(dicData.vehicleNo ?? "") | \(dicData.modelYear ?? "") registered"
