@@ -70,13 +70,15 @@ class VIAddNewCardVC: UIViewController, SFSafariViewControllerDelegate {
         }
         else
         {
-            btnPay.isUserInteractionEnabled = false
-            
-            let cardNumber = txtCardNumber.text ?? ""
-            let cardType = CardType.from(cardNumber: cardNumber)
-            print("Card Type: \(cardType.rawValue)")
-            strCard = cardType.rawValue
-            callPaymentAPI()
+            self.delegateTap?.oncallAPI(txn_id: "", txn_data: "urlEncodedJson")
+            self.dismiss(animated: false)
+//            btnPay.isUserInteractionEnabled = false
+//            
+//            let cardNumber = txtCardNumber.text ?? ""
+//            let cardType = CardType.from(cardNumber: cardNumber)
+//            print("Card Type: \(cardType.rawValue)")
+//            strCard = cardType.rawValue
+//            callPaymentAPI()
         }
     }
     
