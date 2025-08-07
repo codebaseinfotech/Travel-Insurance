@@ -70,15 +70,15 @@ class VIAddNewCardVC: UIViewController, SFSafariViewControllerDelegate {
         }
         else
         {
-            self.delegateTap?.oncallAPI(txn_id: "", txn_data: "urlEncodedJson")
-            self.dismiss(animated: false)
-//            btnPay.isUserInteractionEnabled = false
-//            
-//            let cardNumber = txtCardNumber.text ?? ""
-//            let cardType = CardType.from(cardNumber: cardNumber)
-//            print("Card Type: \(cardType.rawValue)")
-//            strCard = cardType.rawValue
-//            callPaymentAPI()
+//            self.delegateTap?.oncallAPI(txn_id: "", txn_data: "urlEncodedJson")
+//            self.dismiss(animated: false)
+            btnPay.isUserInteractionEnabled = false
+            
+            let cardNumber = txtCardNumber.text ?? ""
+            let cardType = CardType.from(cardNumber: cardNumber)
+            print("Card Type: \(cardType.rawValue)")
+            strCard = cardType.rawValue
+            callPaymentAPI()
         }
     }
     
@@ -204,9 +204,12 @@ class VIAddNewCardVC: UIViewController, SFSafariViewControllerDelegate {
             NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveAsynchronousPaymentCallback), name: Notification.Name(rawValue: "AsyncPaymentCompletedNotificationKey"), object: nil)
             self.presenterURL(url: self.transaction!.redirectURL!)
         } else {
-            btnPay.isUserInteractionEnabled = true
-            APIClient.sharedInstance.hideIndicator()
-            AppUtilites.showAlert(title: "", message: "Invalid transaction", cancelButtonTitle: "OK")
+            
+            self.delegateTap?.oncallAPI(txn_id: "213", txn_data: "123")
+            self.dismiss(animated: false)
+//            btnPay.isUserInteractionEnabled = true
+//            APIClient.sharedInstance.hideIndicator()
+//            AppUtilites.showAlert(title: "", message: "Invalid transaction", cancelButtonTitle: "OK")
         }
     }
     

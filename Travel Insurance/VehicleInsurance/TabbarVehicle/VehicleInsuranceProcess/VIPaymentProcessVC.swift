@@ -196,7 +196,10 @@ extension VIPaymentProcessVC: didOnCallAPI {
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
-            self.viewPaymentProsess.isHidden = true
+            DispatchQueue.main.async {
+                self.viewPaymentProsess.isHidden = true
+            }
+            
             APIClient.sharedInstance.hideIndicator()
             
             if error != nil {

@@ -81,10 +81,10 @@ class VIPaymentSuccessVC: UIViewController {
             viewPaymentProcess.isHidden = false
             viewPaymentSuccess.isHidden = true
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                self.viewPaymentProcess.isHidden = true
-                self.viewPaymentSuccess.isHidden = false
-            }
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+//                self.viewPaymentProcess.isHidden = true
+//                self.viewPaymentSuccess.isHidden = false
+//            }
         }
         
         // Do any additional setup after loading the view.
