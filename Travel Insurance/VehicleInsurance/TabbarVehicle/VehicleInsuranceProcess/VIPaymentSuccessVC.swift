@@ -6,6 +6,10 @@
 //
 
 import UIKit
+protocol didTapOnSuccess: AnyObject {
+    func didTapOnTrackClaim()
+    func didTapOnClose()
+}
 
 class VIPaymentSuccessVC: UIViewController {
 
@@ -25,14 +29,21 @@ class VIPaymentSuccessVC: UIViewController {
     @IBOutlet weak var lblInsuredName: UILabel!
     @IBOutlet weak var lblTotalPremium: UILabel!
     @IBOutlet weak var lblPolicyDate: UILabel!
-    @IBOutlet weak var lblRefernceNumber: UILabel!
+    @IBOutlet weak var lblRefernceNumber: UILabel! {
+        didSet {
+            lblRefernceNumber.text = claim_id
+        }
+    }
     
     @IBOutlet weak var lblViewPolicy: UILabel!
     
     var isCliamRequest = false
     var callAPI = false
     
+    var claim_id = ""
     var dicResponse = TIVehicleInsuranceData()
+    
+    var delegateAction: didTapOnSuccess?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,11 +95,11 @@ class VIPaymentSuccessVC: UIViewController {
     }
     @IBAction func btnCloseAction(_ sender: Any) {
         if isCliamRequest == true {
-            
+            delegateAction?.didTapOnClose()
+            self.dismiss(animated: false)
         } else {
-//            appDelegate?.setUpHomeVehicle()
-            let vc = VehicleMyInsuranceVC.instantiate("Vehicle") as! VehicleMyInsuranceVC
-            self.navigationController?.pushViewController(vc, animated: false)
+            delegateAction?.didTapOnClose()
+            self.dismiss(animated: false)
         }
     }
     

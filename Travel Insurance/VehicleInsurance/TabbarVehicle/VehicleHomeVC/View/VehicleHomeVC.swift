@@ -9,11 +9,21 @@ import UIKit
 
 class VehicleHomeVC: UIViewController {
 
-    @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var lblUserName: UILabel! {
+        didSet {
+            lblUserName.text = "\(appDelegate?.dicCurrentUserData.name ?? "") 👋"
+        }
+    }
     @IBOutlet weak var lblLocation: UILabel!
     @IBOutlet weak var lblCountNotification: UILabel!
     
-    @IBOutlet weak var imgUserProfile: UIImageView!
+    @IBOutlet weak var imgUserProfile: UIImageView! {
+        didSet {
+            var media_link_url = appDelegate?.dicCurrentUserData.imagePath ?? ""
+            media_link_url = (media_link_url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed))!
+            imgUserProfile.sd_setImage(with: URL.init(string: media_link_url), placeholderImage: UIImage(named: "app_logo"), options: [], completed: nil)
+        }
+    }
     
     @IBOutlet weak var tblViewRecentClaim: UITableView! {
         didSet {

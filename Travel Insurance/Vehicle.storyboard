@@ -55,8 +55,13 @@
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7T-fv-yLU">
                                         <rect key="frame" x="337" y="10.666666666666671" width="40" height="40"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_profileVehicle" translatesAutoresizingMaskIntoConstraints="NO" id="kwS-D6-cJ4">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_profileVehicle" translatesAutoresizingMaskIntoConstraints="NO" id="kwS-D6-cJ4">
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -5021,13 +5026,13 @@ your Car …</string>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCa-JA-clk">
                                                                             <rect key="frame" x="0.0" y="0.0" width="169" height="36"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Claim Support:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tw0-PB-dSN">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Claim Support:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tw0-PB-dSN">
                                                                                     <rect key="frame" x="12" y="6" width="83" height="24"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                                                     <color key="textColor" name="VehiclePrimery"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standard" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rv2-Rt-B2T">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Standard" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rv2-Rt-B2T">
                                                                                     <rect key="frame" x="97" y="9.6666666666666714" width="58.333333333333343" height="17"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                                                     <color key="textColor" name="placeholder_field"/>
@@ -6803,20 +6808,95 @@ your Car …</string>
                                     <constraint firstItem="FdK-Ie-ypO" firstAttribute="leading" secondItem="l19-ke-N4p" secondAttribute="leading" id="o7f-MZ-7In"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-3c-GjL">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2or-sL-OdL">
+                                        <rect key="frame" x="30" y="323" width="333" height="206"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGf-TM-3wG">
+                                                <rect key="frame" x="136.66666666666666" y="28" width="60" height="60"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_VIProgress" translatesAutoresizingMaskIntoConstraints="NO" id="Vef-gg-Qdi">
+                                                        <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="9Mo-bs-FH2"/>
+                                                            <constraint firstAttribute="height" constant="40" id="Xk5-ij-bxz"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="VehiclePrimery"/>
+                                                <constraints>
+                                                    <constraint firstItem="Vef-gg-Qdi" firstAttribute="centerY" secondItem="PGf-TM-3wG" secondAttribute="centerY" id="F82-Rn-F1j"/>
+                                                    <constraint firstAttribute="width" constant="60" id="Pvx-Iv-Bn9"/>
+                                                    <constraint firstAttribute="height" constant="60" id="gp4-8I-etE"/>
+                                                    <constraint firstItem="Vef-gg-Qdi" firstAttribute="centerX" secondItem="PGf-TM-3wG" secondAttribute="centerX" id="lfO-Je-lCb"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xaJ-GV-eRC">
+                                                <rect key="frame" x="24" y="104" width="285" height="61"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Processing Your Payment..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UW-eh-jNH">
+                                                        <rect key="frame" x="40.666666666666671" y="0.0" width="203.66666666666663" height="19.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                        <color key="textColor" name="title_color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait while we complete your transaction." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZK-tt-LQE">
+                                                        <rect key="frame" x="26.666666666666686" y="27.333333333333311" width="232" height="33.666666666666657"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" name="placeholder_field"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="xaJ-GV-eRC" firstAttribute="leading" secondItem="2or-sL-OdL" secondAttribute="leading" constant="24" id="B16-Ej-qfE"/>
+                                            <constraint firstItem="PGf-TM-3wG" firstAttribute="top" secondItem="2or-sL-OdL" secondAttribute="top" constant="28" id="BvI-6F-Z3J"/>
+                                            <constraint firstAttribute="height" constant="206" id="GEl-8Z-FTV"/>
+                                            <constraint firstAttribute="trailing" secondItem="xaJ-GV-eRC" secondAttribute="trailing" constant="24" id="RIH-M3-8Jq"/>
+                                            <constraint firstItem="PGf-TM-3wG" firstAttribute="centerX" secondItem="2or-sL-OdL" secondAttribute="centerX" id="h98-QN-gpa"/>
+                                            <constraint firstItem="xaJ-GV-eRC" firstAttribute="top" secondItem="PGf-TM-3wG" secondAttribute="bottom" constant="16" id="xFC-hZ-vEB"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2or-sL-OdL" secondAttribute="trailing" constant="30" id="5HI-Gt-HMq"/>
+                                    <constraint firstItem="2or-sL-OdL" firstAttribute="centerY" secondItem="ahc-3c-GjL" secondAttribute="centerY" id="7AX-gn-atl"/>
+                                    <constraint firstItem="2or-sL-OdL" firstAttribute="leading" secondItem="ahc-3c-GjL" secondAttribute="leading" constant="30" id="use-hA-0PE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qvr-Uo-hVU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qvr-Uo-hVU" firstAttribute="trailing" secondItem="24c-WO-60c" secondAttribute="trailing" id="0vZ-ai-tWg"/>
                             <constraint firstItem="l19-ke-N4p" firstAttribute="leading" secondItem="Qvr-Uo-hVU" secondAttribute="leading" id="30L-j8-EJY"/>
+                            <constraint firstAttribute="bottom" secondItem="ahc-3c-GjL" secondAttribute="bottom" id="4hf-UK-jhy"/>
                             <constraint firstAttribute="trailing" secondItem="fbY-DU-w67" secondAttribute="trailing" id="98a-lw-vyi"/>
                             <constraint firstItem="24c-WO-60c" firstAttribute="top" secondItem="l19-ke-N4p" secondAttribute="bottom" id="EMA-td-gvP"/>
+                            <constraint firstItem="ahc-3c-GjL" firstAttribute="leading" secondItem="Qvr-Uo-hVU" secondAttribute="leading" id="Ghr-1V-Qio"/>
                             <constraint firstItem="fbY-DU-w67" firstAttribute="leading" secondItem="Qvr-Uo-hVU" secondAttribute="leading" id="O1N-C5-0S4"/>
                             <constraint firstItem="l19-ke-N4p" firstAttribute="top" secondItem="fbY-DU-w67" secondAttribute="bottom" id="PzT-hL-KC0"/>
                             <constraint firstItem="fbY-DU-w67" firstAttribute="top" secondItem="Qvr-Uo-hVU" secondAttribute="top" id="UvQ-6S-WKB"/>
                             <constraint firstAttribute="bottom" secondItem="24c-WO-60c" secondAttribute="bottom" constant="8" id="Uz9-6l-quc"/>
                             <constraint firstItem="24c-WO-60c" firstAttribute="leading" secondItem="Qvr-Uo-hVU" secondAttribute="leading" id="jcS-cZ-2bR"/>
+                            <constraint firstItem="ahc-3c-GjL" firstAttribute="trailing" secondItem="Qvr-Uo-hVU" secondAttribute="trailing" id="qc7-6X-nu7"/>
                             <constraint firstItem="l19-ke-N4p" firstAttribute="trailing" secondItem="Qvr-Uo-hVU" secondAttribute="trailing" id="rd1-Jr-JGp"/>
+                            <constraint firstItem="ahc-3c-GjL" firstAttribute="top" secondItem="Yac-G2-NS1" secondAttribute="top" id="t73-Pi-Eeo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -6831,6 +6911,7 @@ your Car …</string>
                         <outlet property="tblViewAddOns" destination="xdT-97-Mpm" id="u3L-37-zMT"/>
                         <outlet property="viewBikeDetailsMain" destination="HGc-XU-7OC" id="ZpJ-zf-VK7"/>
                         <outlet property="viewCarDetailsMain" destination="Cdu-yh-Kc8" id="6eX-SF-lAK"/>
+                        <outlet property="viewPaymentProsess" destination="ahc-3c-GjL" id="UfI-hE-5iS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sk9-qr-kuV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -7682,7 +7763,7 @@ one to make payments easier.</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxe-L9-KC5">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxe-L9-KC5">
                                 <rect key="frame" x="30" y="323" width="333" height="206"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1R-Ln-C11">
@@ -8683,7 +8764,7 @@ one to make payments easier.</string>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oeq-B4-y1t">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_VIPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="qRd-Ot-vdr">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_VIPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="qRd-Ot-vdr">
                                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                             </imageView>
                                                         </subviews>

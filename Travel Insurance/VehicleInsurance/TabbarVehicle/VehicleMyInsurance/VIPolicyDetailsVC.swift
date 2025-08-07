@@ -33,6 +33,7 @@ class VIPolicyDetailsVC: UIViewController {
     
     var planId = 0
     
+    var dicInsuranceDetails = TIVehicleInsuranceDetialsData()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,6 +51,7 @@ class VIPolicyDetailsVC: UIViewController {
     }
     @IBAction func btnClaimInsurance(_ sender: Any) {
         let vc = VISubmitClaimRequestVC.instantiate("Vehicle") as! VISubmitClaimRequestVC
+        vc.dicInsuranceDetails = dicInsuranceDetails
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -79,7 +81,7 @@ class VIPolicyDetailsVC: UIViewController {
                     if status == 1 {
                         if let dicResponse = response?.value(forKey: "data") as? NSDictionary {
                             let dicData = TIVehicleInsuranceDetialsData(fromDictionary: dicResponse)
-                           
+                            self.dicInsuranceDetails = dicData
                             if dicData.vehiclePlanId == 1 {
                                 self.viewBikeDetails.isHidden = false
                                 self.viewCarDetails.isHidden = true
@@ -92,7 +94,7 @@ class VIPolicyDetailsVC: UIViewController {
                             self.lblCarNumber.text = "\(dicData.vehicleNo ?? "") | \(dicData.modelYear ?? "") registered"
                             self.lblBikeNumber.text = "\(dicData.vehicleNo ?? "") | \(dicData.modelYear ?? "") registered"
                             self.lblFullName.text = dicData.name ?? ""
-                            self.lblEmail.text = "Sent to your email : " + dicData.email ?? ""
+                            self.lblEmail.text = "Sent to your email : " + dicData.email
                             self.lblCardHolderName.text = dicData.name ?? ""
                             self.lblPolicyNumber.text = dicData.policyId ?? ""
                             self.lblExpireDate.text = dicData.policyEndDate ?? ""

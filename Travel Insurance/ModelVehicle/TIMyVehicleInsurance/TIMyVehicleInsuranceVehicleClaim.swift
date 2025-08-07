@@ -7,7 +7,7 @@ import Foundation
 
 class TIMyVehicleInsuranceVehicleClaim : NSObject, NSCoding{
 
-	var vehicle : [TIMyVehicleInsuranceVehicle]!
+	var vehicle : [TIClaimVehicle]!
 
 
 	/**
@@ -30,10 +30,10 @@ class TIMyVehicleInsuranceVehicleClaim : NSObject, NSCoding{
 	 */
 	@objc func parseJSONData(fromDictionary dictionary: NSDictionary)
 	{
-		vehicle = [TIMyVehicleInsuranceVehicle]()
+		vehicle = [TIClaimVehicle]()
 		if let vehicleArray = dictionary["vehicle"] as? [NSDictionary]{
 			for dic in vehicleArray{
-				let value = TIMyVehicleInsuranceVehicle(fromDictionary: dic)
+				let value = TIClaimVehicle(fromDictionary: dic)
 				vehicle.append(value)
 			}
 		}
@@ -61,7 +61,7 @@ class TIMyVehicleInsuranceVehicleClaim : NSObject, NSCoding{
     */
     @objc required init(coder aDecoder: NSCoder)
 	{
-         vehicle = aDecoder.decodeObject(forKey: "vehicle") as? [TIMyVehicleInsuranceVehicle]
+         vehicle = aDecoder.decodeObject(forKey: "vehicle") as? [TIClaimVehicle]
 
 	}
 

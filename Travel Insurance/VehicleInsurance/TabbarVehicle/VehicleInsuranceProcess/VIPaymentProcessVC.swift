@@ -65,6 +65,11 @@ class VIPaymentProcessVC: UIViewController {
             lblBikeNumber.text = number
         }
     }
+    @IBOutlet weak var viewPaymentProsess: UIView! {
+        didSet {
+            viewPaymentProsess.isHidden = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

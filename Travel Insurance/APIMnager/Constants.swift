@@ -120,6 +120,8 @@ let MY_VEHICLE_INSURANCE = "my-vehicle-insurance"
 
 let MY_VEHICLE_INSURANCE_DETAILS = "vehicle-insurance-details"
 
+let CLAIM_VEHICLE_INSURANCE = "claim-vehicle-insurance"
+
 // **********************************************************************
 
 let appDelegate = UIApplication.shared.delegate as? AppDelegate

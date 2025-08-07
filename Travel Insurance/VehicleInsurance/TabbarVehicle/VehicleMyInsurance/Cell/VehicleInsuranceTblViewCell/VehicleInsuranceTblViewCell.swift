@@ -44,6 +44,7 @@ class VehicleInsuranceTblViewCell: UITableViewCell {
     
     var tapOnClaimTrack: (()->Void)?
     var tapOnCancelPolicy: (()->Void)?
+    var tapOnViewDetails: (()->Void)?
     
     var arrAddons: [TIMyVehicleInsuranceVehicleInsuranceOptionalAddOn] = []
     
@@ -72,6 +73,7 @@ class VehicleInsuranceTblViewCell: UITableViewCell {
         tapOnClaimTrack?()
     }
     @IBAction func btnViewDetails(_ sender: Any) {
+        tapOnViewDetails?()
     }
     @IBAction func btnCancelPolicy(_ sender: Any) {
         tapOnCancelPolicy?()

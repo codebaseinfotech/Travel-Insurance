@@ -302,6 +302,11 @@ extension VehicleMyInsuranceVC: UITableViewDelegate, UITableViewDataSource {
                     let vc = VICancelPolicyVC.instantiate("Vehicle") as! VICancelPolicyVC
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
+                cell.tapOnViewDetails = {
+                    let vc = VIPolicyDetailsVC.instantiate("Vehicle") as! VIPolicyDetailsVC
+                    vc.planId = dicData.id ?? 0
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
                 
                 return cell
             } else {
@@ -361,6 +366,13 @@ extension VehicleMyInsuranceVC: UITableViewDelegate, UITableViewDataSource {
                     cell.arrAddons = dicData.vehicleInsuranceOptionalAddOn
                     cell.tblviewAddOnss.reloadData()
                 }
+                
+                cell.tapOnViewDetails = {
+                    let vc = VIPolicyDetailsVC.instantiate("Vehicle") as! VIPolicyDetailsVC
+                    vc.planId = dicData.id ?? 0
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+                
                 
                 cell.tapOnCancelPolicy = {
                     let vc = VICancelPolicyVC.instantiate("Vehicle") as! VICancelPolicyVC
@@ -431,6 +443,13 @@ extension VehicleMyInsuranceVC: UITableViewDelegate, UITableViewDataSource {
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
                 
+                cell.tapOnViewDetails = {
+                    let vc = VIPolicyDetailsVC.instantiate("Vehicle") as! VIPolicyDetailsVC
+                    vc.planId = dicData.id ?? 0
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+                
+                
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "TravelInsuranceTblViewCell") as! TravelInsuranceTblViewCell
@@ -464,6 +483,25 @@ extension VehicleMyInsuranceVC: UITableViewDelegate, UITableViewDataSource {
         } else if tableView == tblViewClaims {
             let cell = tableView.dequeueReusableCell(withIdentifier: "VehicleInsuranceTblViewCell") as! VehicleInsuranceTblViewCell
             
+            
+            let dicData = dicMyVehicleInsurance.vehicleClaim.vehicle[indexPath.row]
+            
+            if dicData.vehicleDetails.vehiclePlanId == 1 {
+                cell.viewBikeDetials.isHidden = false
+                cell.viewCarDetails.isHidden = true
+            } else {
+                cell.viewBikeDetials.isHidden = true
+                cell.viewCarDetails.isHidden = false
+            }
+            
+            cell.lblCarName.text = "\(dicData.vehicleDetails.vehicleModel ?? "") (\(dicData.vehicleDetails.engineSize ?? "") cc)"
+            cell.lblBikeName.text = "\(dicData.vehicleDetails.vehicleModel ?? "") (\(dicData.vehicleDetails.engineSize ?? "") cc)"
+            
+            cell.lblCarNumber.text = "\(dicData.vehicleDetails.vehicleNo ?? "") | \(dicData.vehicleDetails.modelYear ?? "") registered"
+            cell.lblBikeNumber.text = "\(dicData.vehicleDetails.vehicleNo ?? "") | \(dicData.vehicleDetails.modelYear ?? "") registered"
+            
+            cell.lblPolicyPrice.text = "IQD \(dicData.vehicleDetails.totalPremium ?? "")/ year"
+        
             cell.tapOnClaimTrack = {
                 let vc = VITrackClaimRequestVC.instantiate("Vehicle") as! VITrackClaimRequestVC
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -471,6 +509,12 @@ extension VehicleMyInsuranceVC: UITableViewDelegate, UITableViewDataSource {
             
             cell.tapOnCancelPolicy = {
                 let vc = VICancelPolicyVC.instantiate("Vehicle") as! VICancelPolicyVC
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            
+            cell.tapOnViewDetails = {
+                let vc = VIPolicyDetailsVC.instantiate("Vehicle") as! VIPolicyDetailsVC
+                vc.planId = dicData.id ?? 0
                 self.navigationController?.pushViewController(vc, animated: true)
             }
             

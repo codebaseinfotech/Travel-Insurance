@@ -167,7 +167,8 @@ class VIPaymentModeVC: UIViewController {
                                 vc.modalPresentationStyle = .overFullScreen
                                 vc.callAPI = false
                                 vc.dicResponse = dicData
-                                self.present(vc, animated: false)
+                                vc.delegateAction = self
+                                self.present(vc, animated: true)
                             }
                         }
                         else
@@ -254,6 +255,19 @@ class VIPaymentModeVC: UIViewController {
         return s
     }
    
+}
+
+extension VIPaymentModeVC: didTapOnSuccess {
+    func didTapOnTrackClaim() {
+        
+    }
+    
+    func didTapOnClose() {
+        let vc = VehicleMyInsuranceVC.instantiate("Vehicle") as! VehicleMyInsuranceVC
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    
 }
 
 //MARK: - tblViewDelegate & DataSource

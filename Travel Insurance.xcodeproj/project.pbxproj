@@ -24,6 +24,9 @@
 		18B2F3762BA46FFE008A0F74 /* ContryCodeConversionRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B2F3742BA46FFE008A0F74 /* ContryCodeConversionRate.swift */; };
 		391DFDFE2DEF0EE300DC90EA /* VIProcess1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391DFDFD2DEF0EE300DC90EA /* VIProcess1VC.swift */; };
 		391DFE002DEF17D800DC90EA /* VIProcess2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391DFDFF2DEF17D800DC90EA /* VIProcess2VC.swift */; };
+		392E615F2E447F0200ED586F /* TIClaimVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392E615D2E447F0200ED586F /* TIClaimVehicle.swift */; };
+		392E61602E447F0200ED586F /* TIClaimVehicleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392E615E2E447F0200ED586F /* TIClaimVehicleDetail.swift */; };
+		392E61622E44849300ED586F /* String+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392E61612E44849300ED586F /* String+Extention.swift */; };
 		393E3C382C92F36F0096DBF5 /* OPPWAMobile_MSA.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393E3C312C92F35E0096DBF5 /* OPPWAMobile_MSA.xcframework */; };
 		393E3C392C92F36F0096DBF5 /* OPPWAMobile_MSA.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 393E3C312C92F35E0096DBF5 /* OPPWAMobile_MSA.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		394C2ACE2DEEFE76003B988C /* VehicleHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394C2ACD2DEEFE76003B988C /* VehicleHomeVC.swift */; };
@@ -298,6 +301,9 @@
 		18B2F3742BA46FFE008A0F74 /* ContryCodeConversionRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContryCodeConversionRate.swift; sourceTree = "<group>"; };
 		391DFDFD2DEF0EE300DC90EA /* VIProcess1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIProcess1VC.swift; sourceTree = "<group>"; };
 		391DFDFF2DEF17D800DC90EA /* VIProcess2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIProcess2VC.swift; sourceTree = "<group>"; };
+		392E615D2E447F0200ED586F /* TIClaimVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIClaimVehicle.swift; sourceTree = "<group>"; };
+		392E615E2E447F0200ED586F /* TIClaimVehicleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIClaimVehicleDetail.swift; sourceTree = "<group>"; };
+		392E61612E44849300ED586F /* String+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extention.swift"; sourceTree = "<group>"; };
 		393E3C312C92F35E0096DBF5 /* OPPWAMobile_MSA.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = OPPWAMobile_MSA.xcframework; sourceTree = "<group>"; };
 		394C2ACD2DEEFE76003B988C /* VehicleHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleHomeVC.swift; sourceTree = "<group>"; };
 		394E40B72DEF2C1D002E14DB /* VIProcess4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIProcess4VC.swift; sourceTree = "<group>"; };
@@ -661,6 +667,8 @@
 		39B9C3762E40B09500B5D10E /* TIMyVehicleInsurance */ = {
 			isa = PBXGroup;
 			children = (
+				392E615D2E447F0200ED586F /* TIClaimVehicle.swift */,
+				392E615E2E447F0200ED586F /* TIClaimVehicleDetail.swift */,
 				39B9C3692E40B09500B5D10E /* TIMyVehicleInsurance.swift */,
 				39B9C36A2E40B09500B5D10E /* TIMyVehicleInsuranceCategory.swift */,
 				39B9C36B2E40B09500B5D10E /* TIMyVehicleInsuranceCurrent.swift */,
@@ -816,6 +824,7 @@
 			children = (
 				880777082B50EE60003F723C /* UIView+Extension.swift */,
 				880777092B50EE60003F723C /* UIColor+Extention.swift */,
+				392E61612E44849300ED586F /* String+Extention.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1688,6 +1697,7 @@
 				18170B392BC9327D00DF8C65 /* PaymentDoneVC.swift in Sources */,
 				39E14BF82DEF041D0032E72F /* VehicleNotificationVC.swift in Sources */,
 				880C38FC2B709B4B0054313B /* NotificationVC.swift in Sources */,
+				392E61622E44849300ED586F /* String+Extention.swift in Sources */,
 				886D83DB2AF89AF4004AD63D /* HomeDetailVC.swift in Sources */,
 				BCF9CEB02DF1A78F008E1D2C /* VISubmitClaimRequestVC.swift in Sources */,
 				396AC4CF2C57B84B0046C015 /* TIFormListUserinsurancedata.swift in Sources */,
@@ -1791,6 +1801,8 @@
 				88038D852AEA7E9700D6712E /* CreateNewPasswordVC.swift in Sources */,
 				BC0176E62D6C84C900E262A0 /* TIModifyDetail.swift in Sources */,
 				BC0176E72D6C84C900E262A0 /* TIModifyDetailCurrentPolicy.swift in Sources */,
+				392E615F2E447F0200ED586F /* TIClaimVehicle.swift in Sources */,
+				392E61602E447F0200ED586F /* TIClaimVehicleDetail.swift in Sources */,
 				39B9C3772E40B09500B5D10E /* TIMyVehicleInsuranceResponse.swift in Sources */,
 				39B9C3782E40B09500B5D10E /* TIMyVehicleInsuranceVehicleInsuranceOptionalAddOn.swift in Sources */,
 				39B9C3792E40B09500B5D10E /* TIMyVehicleInsurancePlanTypeCategory.swift in Sources */,
