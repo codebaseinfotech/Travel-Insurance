@@ -386,36 +386,6 @@
             endingLineNumber = "183"
             landmarkName = "callPaymentAPI()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A0C72F2D-CA34-4E68-B6BD-B971DAA66C29 - b379c8d852209d1b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.NSDictionary&gt;, Swift.Optional&lt;Swift.Error&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; () in Hamraa_Insurance.PaymentDetailsVC.callPaymentAPI() -&gt; ()"
-                  moduleName = "Hamraa Insurance.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ankitgabani/Documents/2025%20iOS/iOS_Travel-Insurance/Travel%20Insurance/MVC/Controller/home/PaymentDetailsVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "183"
-                  endingLineNumber = "183">
-               </Location>
-               <Location
-                  uuid = "A0C72F2D-CA34-4E68-B6BD-B971DAA66C29 - 9e4eca2098911d60"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.OPPTransaction, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.NSDictionary&gt;, Swift.Optional&lt;Swift.Error&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; () in Hamraa_Insurance.PaymentDetailsVC.callPaymentAPI() -&gt; ()"
-                  moduleName = "Hamraa Insurance.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ankitgabani/Documents/2025%20iOS/iOS_Travel-Insurance/Travel%20Insurance/MVC/Controller/home/PaymentDetailsVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "184"
-                  endingLineNumber = "184">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

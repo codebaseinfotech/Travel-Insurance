@@ -7634,7 +7634,7 @@ one to make payments easier.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxK-5O-jZG" customClass="RoundedCornerView" customModule="Hamraa_Insurance" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="421" width="393" height="431"/>
+                                <rect key="frame" x="0.0" y="392" width="393" height="460"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKN-yW-g5R">
                                         <rect key="frame" x="20" y="24" width="25" height="25"/>
@@ -7692,14 +7692,14 @@ one to make payments easier.</string>
                                             <constraint firstAttribute="bottom" secondItem="AGC-9k-0vh" secondAttribute="bottom" id="pCw-5q-IWT"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyL-PE-QCF">
-                                        <rect key="frame" x="60" y="25" width="119" height="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyL-PE-QCF">
+                                        <rect key="frame" x="60" y="25" width="129.66666666666666" height="23"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                         <color key="textColor" name="title_color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rSH-dN-XK9">
-                                        <rect key="frame" x="20" y="95" width="353" height="154"/>
+                                        <rect key="frame" x="20" y="95" width="353" height="241"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XJZ-7e-nDp">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="67"/>
@@ -7713,10 +7713,13 @@ one to make payments easier.</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1p-rs-Siw">
                                                         <rect key="frame" x="0.0" y="22" width="353" height="45"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234 5678 9012 1234" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QoG-bm-6H8">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234 5678 9012 1234" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QoG-bm-6H8" customClass="JMMaskTextField" customModule="JMMaskTextField_Swift">
                                                                 <rect key="frame" x="16" y="0.0" width="321" height="45"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="maskString" value="0000 0000 0000 0000"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -7741,8 +7744,48 @@ one to make payments easier.</string>
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="60i-c6-xng">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JoS-Ur-kPG">
                                                 <rect key="frame" x="0.0" y="87" width="353" height="67"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CardHolde Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiA-g1-Gcl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <color key="textColor" name="title_color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJg-a7-nf2">
+                                                        <rect key="frame" x="0.0" y="22" width="353" height="45"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter card holder name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k83-6X-ETE">
+                                                                <rect key="frame" x="16" y="0.0" width="321" height="45"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="k83-6X-ETE" firstAttribute="top" secondItem="rJg-a7-nf2" secondAttribute="top" id="2Sa-CL-ulS"/>
+                                                            <constraint firstAttribute="trailing" secondItem="k83-6X-ETE" secondAttribute="trailing" constant="16" id="E76-4D-0DP"/>
+                                                            <constraint firstAttribute="height" constant="45" id="YfH-Bh-mz5"/>
+                                                            <constraint firstItem="k83-6X-ETE" firstAttribute="leading" secondItem="rJg-a7-nf2" secondAttribute="leading" constant="16" id="ud7-hl-PsY"/>
+                                                            <constraint firstAttribute="bottom" secondItem="k83-6X-ETE" secondAttribute="bottom" id="zaG-8d-1RG"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="border_color"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="60i-c6-xng">
+                                                <rect key="frame" x="0.0" y="174" width="353" height="67"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CQp-7H-nb6">
                                                         <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="67"/>
@@ -7756,10 +7799,13 @@ one to make payments easier.</string>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGo-n9-N7f">
                                                                 <rect key="frame" x="0.0" y="22" width="166.66666666666666" height="45"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM/YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bL3-EY-27r">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM/YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bL3-EY-27r" customClass="JMMaskTextField" customModule="JMMaskTextField_Swift">
                                                                         <rect key="frame" x="16.000000000000007" y="0.0" width="104.66666666666669" height="45"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="maskString" value="00/0000"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </textField>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_VICalenderCard" translatesAutoresizingMaskIntoConstraints="NO" id="il8-l0-9Bo">
                                                                         <rect key="frame" x="136.66666666666666" y="14" width="17" height="17"/>
@@ -7805,10 +7851,13 @@ one to make payments easier.</string>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZi-1P-NkR">
                                                                 <rect key="frame" x="0.0" y="22" width="166.33333333333334" height="45"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="***" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BxF-nS-cLK">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="***" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BxF-nS-cLK" customClass="JMMaskTextField" customModule="JMMaskTextField_Swift">
                                                                         <rect key="frame" x="15.999999999999993" y="0.0" width="97.333333333333314" height="45"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="string" keyPath="maskString" value="000"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </textField>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_VICVV" translatesAutoresizingMaskIntoConstraints="NO" id="331-xB-AOa">
                                                                         <rect key="frame" x="129.33333333333334" y="14" width="17" height="17"/>
@@ -7846,21 +7895,21 @@ one to make payments easier.</string>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yob-kg-inR">
-                                        <rect key="frame" x="20" y="267" width="353" height="24"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yob-kg-inR">
+                                        <rect key="frame" x="20" y="354" width="353" height="0.0"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rH0-cB-f5B">
-                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="0.0"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_unCheck" translatesAutoresizingMaskIntoConstraints="NO" id="XgZ-Z5-gmr">
-                                                        <rect key="frame" x="3.6666666666666679" y="3.6666666666666288" width="17" height="17"/>
+                                                        <rect key="frame" x="3.6666666666666679" y="-8.3333333333333712" width="17" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="17" id="U5U-eD-wsk"/>
                                                             <constraint firstAttribute="height" constant="17" id="WXn-3g-zpa"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMf-aX-hNq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <connections>
                                                             <action selector="btnSaveThisMethodAction:" destination="2HH-lc-vQr" eventType="touchUpInside" id="fwW-mA-rTl"/>
@@ -7881,21 +7930,21 @@ one to make payments easier.</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save this payment method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stB-1z-aef">
-                                                <rect key="frame" x="29" y="0.0" width="324" height="24"/>
+                                                <rect key="frame" x="29" y="0.0" width="324" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" name="placeholder_field"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="IdT-Xj-uhU"/>
+                                            <constraint firstAttribute="height" id="IdT-Xj-uhU"/>
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Jr-px-Mny">
-                                        <rect key="frame" x="17" y="328" width="359" height="45"/>
+                                        <rect key="frame" x="17" y="391" width="359" height="45"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Vvg-8Q-A7I">
-                                                <rect key="frame" x="146" y="12.666666666666629" width="67.333333333333314" height="20"/>
+                                                <rect key="frame" x="166" y="12.666666666666629" width="27" height="20"/>
                                                 <subviews>
                                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lockVI" translatesAutoresizingMaskIntoConstraints="NO" id="0oT-eH-uqZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -7904,8 +7953,8 @@ one to make payments easier.</string>
                                                             <constraint firstAttribute="height" constant="20" id="iWm-8t-kNF"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eil-0e-PWt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="67.333333333333329" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eil-0e-PWt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="27" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -7947,7 +7996,7 @@ one to make payments easier.</string>
                                     <constraint firstAttribute="trailing" secondItem="yob-kg-inR" secondAttribute="trailing" constant="20" id="OyW-nV-96r"/>
                                     <constraint firstItem="hKN-yW-g5R" firstAttribute="leading" secondItem="SxK-5O-jZG" secondAttribute="leading" constant="20" id="UPP-01-lif"/>
                                     <constraint firstItem="hDi-Vl-c9X" firstAttribute="top" secondItem="SxK-5O-jZG" secondAttribute="top" constant="24" id="XpD-0p-ENg"/>
-                                    <constraint firstAttribute="height" constant="431" id="Xsf-X1-tc1"/>
+                                    <constraint firstAttribute="height" constant="460" id="Xsf-X1-tc1"/>
                                     <constraint firstItem="yob-kg-inR" firstAttribute="leading" secondItem="SxK-5O-jZG" secondAttribute="leading" constant="20" id="bD8-O9-dd4"/>
                                     <constraint firstItem="rSH-dN-XK9" firstAttribute="top" secondItem="hKN-yW-g5R" secondAttribute="bottom" constant="46" id="cCF-Qy-AsH"/>
                                     <constraint firstItem="iyL-PE-QCF" firstAttribute="leading" secondItem="hKN-yW-g5R" secondAttribute="trailing" constant="15" id="j18-KA-fuV"/>
@@ -7974,9 +8023,11 @@ one to make payments easier.</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnPay" destination="s9j-9N-zV3" id="qQY-51-bgu"/>
                         <outlet property="txtCVV" destination="BxF-nS-cLK" id="212-fZ-WyJ"/>
                         <outlet property="txtCardNumber" destination="QoG-bm-6H8" id="9XW-C9-r0X"/>
                         <outlet property="txtExpireDate" destination="bL3-EY-27r" id="jRA-Pa-0rp"/>
+                        <outlet property="txtName" destination="k83-6X-ETE" id="rzp-od-Blm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eai-jt-lcj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

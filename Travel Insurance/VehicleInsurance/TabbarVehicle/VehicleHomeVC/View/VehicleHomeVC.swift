@@ -42,7 +42,8 @@ class VehicleHomeVC: UIViewController {
         super.viewDidLoad()
 
         viewTabbar.layer.applySketchShadow(color: UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.11), alpha: 1, x: 0, y: 0, blur: 6, spread: 0)
-
+        callNotiCountAPI()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -87,7 +88,54 @@ class VehicleHomeVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: false)
     }
     
-    
+    // MARK: - calling API
+    func callNotiCountAPI()
+    {
+        APIClient.sharedInstance.showIndicator()
+        
+        let parm = ["":""]
+        
+        print(parm)
+        
+        APIClient.sharedInstance.MakeAPICallWithAuthHeaderGet(NOTIFICATIONS_COUNT, parameters: [:]) { response, error, statusCode in
+            
+            print("STATUS CODE \(String(describing: statusCode))")
+            print("RESPONSE \(String(describing: response))")
+            
+            if error == nil
+            {
+                APIClient.sharedInstance.hideIndicator()
+                
+                let status = response?.value(forKey: "status") as? Int
+                let message = response?.value(forKey: "message") as? String
+                let NotificationCOunt = response?.value(forKey: "NotificationCOunt") as? Int
+
+                if statusCode == 200
+                {
+                    if status == 1 {
+                       // self.ViewNotiCount.isHidden = false
+                        self.lblCountNotification.text = "\(NotificationCOunt ?? 0)"
+                    }
+                    else
+                    {
+                       // self.ViewNotiCount.isHidden = true
+                        self.lblCountNotification.text = "0"
+                    }
+                }
+                else
+                {
+                    APIClient.sharedInstance.hideIndicator()
+                    
+                    self.setUpMakeToast(msg: message ?? "")
+                }
+            }
+            else
+            {
+                APIClient.sharedInstance.hideIndicator()
+            }
+            
+        }
+    }
 
 }
 
