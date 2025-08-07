@@ -2056,6 +2056,7 @@
 				INFOPLIST_FILE = "Travel Insurance/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Hamraa Insurance";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires to access your camera to show image on profile";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need microphone access to record audio.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save photo in your photo library";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires to access your photo library to show image on profile";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -2103,6 +2104,7 @@
 				INFOPLIST_FILE = "Travel Insurance/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Hamraa Insurance";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires to access your camera to show image on profile";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need microphone access to record audio.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save photo in your photo library";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires to access your photo library to show image on profile";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

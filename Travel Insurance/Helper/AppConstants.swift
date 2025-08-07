@@ -29,8 +29,8 @@ class AppManger {
     var vehicle_model: String = ""
     var model_year: String = ""
     var registration_date: String = ""
-    var fuel_type: String = "petrol"
-    var color: String = "black"
+    var fuel_type: String = ""
+    var color: String = ""
     var engine_no: String = ""
     var chassis_no: String = ""
     var engine_size: Int = 0

@@ -22,6 +22,9 @@ class VIProcess3VC: UIViewController {
     @IBOutlet weak var txtCarClassisNumber: UITextField!
     @IBOutlet weak var txtCarEngineSize: UITextField!
     
+    @IBOutlet weak var txtCarVColo: UITextField!
+    @IBOutlet weak var txtCarVFuelType: UITextField!
+    
     @IBOutlet weak var txtBikeVMake: UITextField!
     @IBOutlet weak var txtBikeYearManufacture: UITextField! 
     @IBOutlet weak var txtBikeRegistrationNumber: UITextField!
@@ -34,6 +37,8 @@ class VIProcess3VC: UIViewController {
     var arrAllGetBrand: [THGetBrandData] = []
     
     var dropDownMake = DropDown()
+    var dropDownYear = DropDown()
+    var dropDownFuelType = DropDown()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +53,8 @@ class VIProcess3VC: UIViewController {
         txtBikeRegistrationNumber.text = AppManger.shared.vehicle_no
         
         callGetBrandAPI()
+        setUpDropdownVehicleYear()
+        setUpDropdownVehicleFuelType()
         // Do any additional setup after loading the view.
     }
     
@@ -66,6 +73,8 @@ class VIProcess3VC: UIViewController {
                 appManger.engine_no = txtCarEngineNumber.text ?? ""
                 appManger.chassis_no = txtCarClassisNumber.text ?? ""
                 appManger.engine_size = Int(txtCarEngineSize.text ?? "") ?? 0
+                appManger.color = txtCarVColo.text ?? ""
+                appManger.fuel_type = txtCarVFuelType.text ?? ""
                 
                 let vc = PremiumCalculationVC.instantiate("Vehicle") as! PremiumCalculationVC
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -92,6 +101,18 @@ class VIProcess3VC: UIViewController {
     @IBAction func clickedMake(_ sender: UIButton) {
         dropDownMake.show()
     }
+    @IBAction func clickedCarVYear(_ sender: Any) {
+        dropDownYear.show()
+    }
+    @IBAction func clickedCarVFuelType(_ sender: Any) {
+        dropDownFuelType.show()
+    }
+    @IBAction func clickedBikeVYear(_ sender: Any) {
+        dropDownYear.show()
+    }
+    @IBAction func clickedBikeVFuelTypw(_ sender: Any) {
+        dropDownFuelType.show()
+    }
     
     
     func isValidCarInsurance() -> Bool {
@@ -101,7 +122,7 @@ class VIProcess3VC: UIViewController {
         }
         
         guard let modelYear = txtCarModelYear.text, !modelYear.isEmpty else {
-            self.setUpMakeToast(msg: "Please enter vehicle year")
+            self.setUpMakeToast(msg: "Please select vehicle year")
             return false
         }
         
@@ -117,6 +138,16 @@ class VIProcess3VC: UIViewController {
         
         guard let vehiclePlatNumber = txtCarPlateNumber.text, !vehiclePlatNumber.isEmpty else {
             self.setUpMakeToast(msg: "Please enter vehicle plat number")
+            return false
+        }
+        
+        guard let color = txtCarVColo.text, !color.isEmpty else {
+            self.setUpMakeToast(msg: "Please enter vehicle color")
+            return false
+        }
+        
+        guard let fuelType = txtCarVFuelType.text, !fuelType.isEmpty else {
+            self.setUpMakeToast(msg: "Please select vehicle fuel type")
             return false
         }
         
@@ -145,7 +176,7 @@ class VIProcess3VC: UIViewController {
         }
         
         guard let bikeYear = txtBikeYearManufacture.text, !bikeYear.isEmpty else {
-            self.setUpMakeToast(msg: "Please enter year of manufacture")
+            self.setUpMakeToast(msg: "Please select year of manufacture")
             return false
         }
         
@@ -165,7 +196,7 @@ class VIProcess3VC: UIViewController {
         }
         
         guard let fuelType = txtBikeFuleType.text, !fuelType.isEmpty else {
-            self.setUpMakeToast(msg: "Please enter fuel type")
+            self.setUpMakeToast(msg: "Please select fuel type")
             return false
         }
         
@@ -218,6 +249,60 @@ class VIProcess3VC: UIViewController {
         dropDownMake.selectionBackgroundColor = UIColor.clear
         
         dropDownMake.reloadAllComponents()
+    }
+    
+    func setUpDropdownVehicleYear()
+    {
+        let currentYear = Calendar.current.component(.year, from: Date())
+        let years: [String] = (0..<25).map { String(currentYear - $0) }
+
+        print(years)
+        dropDownYear.dataSource = years
+        dropDownYear.anchorView = AppManger.shared.isCarInsurance ? txtCarModelYear : txtBikeYearManufacture
+        dropDownYear.direction = .bottom
+        
+        dropDownYear.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            
+            if AppManger.shared.isCarInsurance {
+                txtCarModelYear.text = item
+            } else {
+                txtBikeYearManufacture.text = item
+            }
+        }
+        dropDownYear.bottomOffset = CGPoint(x: 0, y: AppManger.shared.isCarInsurance ? txtCarModelYear.bounds.height : txtBikeYearManufacture.bounds.height)
+        dropDownYear.topOffset = CGPoint(x: 0, y: AppManger.shared.isCarInsurance ? txtCarModelYear.bounds.height : txtBikeYearManufacture.bounds.height)
+        dropDownYear.dismissMode = .onTap
+        dropDownYear.textColor = UIColor.darkGray
+        dropDownYear.backgroundColor = UIColor.white
+        dropDownYear.selectionBackgroundColor = UIColor.clear
+        
+        dropDownYear.reloadAllComponents()
+    }
+    
+    func setUpDropdownVehicleFuelType()
+    {
+        dropDownFuelType.dataSource = ["Petrol", "Electric"]
+        dropDownFuelType.anchorView = AppManger.shared.isCarInsurance ? txtCarVFuelType : txtBikeFuleType
+        dropDownFuelType.direction = .bottom
+        
+        dropDownFuelType.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            
+            if AppManger.shared.isCarInsurance {
+                txtCarVFuelType.text = item
+            } else {
+                txtBikeFuleType.text = item
+            }
+        }
+        dropDownFuelType.bottomOffset = CGPoint(x: 0, y: AppManger.shared.isCarInsurance ? txtCarVFuelType.bounds.height : txtBikeFuleType.bounds.height)
+        dropDownFuelType.topOffset = CGPoint(x: 0, y: AppManger.shared.isCarInsurance ? txtCarVFuelType.bounds.height : txtBikeFuleType.bounds.height)
+        dropDownFuelType.dismissMode = .onTap
+        dropDownFuelType.textColor = UIColor.darkGray
+        dropDownFuelType.backgroundColor = UIColor.white
+        dropDownFuelType.selectionBackgroundColor = UIColor.clear
+        
+        dropDownFuelType.reloadAllComponents()
     }
     
     // MARK: - calling API

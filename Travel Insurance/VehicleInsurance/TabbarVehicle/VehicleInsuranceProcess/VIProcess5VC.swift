@@ -201,13 +201,9 @@ class VIProcess5VC: UIViewController {
             self.openCamera()
         }))
         
-        alert1.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
-            self.openGallary()
+        alert1.addAction(UIAlertAction(title: "Video", style: .default, handler: { _ in
+            self.openVideoCamera()
         }))
-        
-        alert1.addAction(UIAlertAction(title: "Video Library", style: .default) { _ in
-            self.openGallaryVideo()
-        })
         
         alert1.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
         
@@ -280,6 +276,23 @@ extension VIProcess5VC: UIImagePickerControllerDelegate, UINavigationControllerD
             let windows = UIApplication.shared.windows
             windows.last?.makeToast("You don't have camera")
         }
+    }
+    
+    func openVideoCamera() {
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+            print("Camera not available")
+            return
+        }
+
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.mediaTypes = ["public.movie"] // Only allow video recording
+        picker.cameraCaptureMode = .video
+        picker.videoQuality = .typeMedium // or .typeHigh
+        picker.delegate = self
+        picker.allowsEditing = false
+
+        present(picker, animated: true, completion: nil)
     }
     
     func checkCameraPermission() {

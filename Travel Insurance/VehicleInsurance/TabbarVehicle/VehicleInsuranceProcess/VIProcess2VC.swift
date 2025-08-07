@@ -28,10 +28,10 @@ class VIProcess2VC: UIViewController {
             return
         }
         
-        guard AppUtilites.sharedInstance.isValidVehicleNumber(vehicleNumber) else {
-            self.setUpMakeToast(msg: "Please enter a valid vehicle number")
-            return
-        }
+//        guard AppUtilites.sharedInstance.isValidVehicleNumber(vehicleNumber) else {
+//            self.setUpMakeToast(msg: "Please enter a valid vehicle number")
+//            return
+//        }
         
         AppManger.shared.vehicle_no = txtEnterVehicleNumber.text?.uppercased() ?? ""
         let vc = VIProcess3VC.instantiate("Vehicle") as! VIProcess3VC
