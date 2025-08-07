@@ -386,36 +386,6 @@
             endingLineNumber = "183"
             landmarkName = "callPaymentAPI()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A0C72F2D-CA34-4E68-B6BD-B971DAA66C29 - b379c8d852209d1b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.NSDictionary&gt;, Swift.Optional&lt;Swift.Error&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; () in Hamraa_Insurance.PaymentDetailsVC.callPaymentAPI() -&gt; ()"
-                  moduleName = "Hamraa Insurance.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ankitgabani/Documents/2025%20iOS/iOS_Travel-Insurance/Travel%20Insurance/MVC/Controller/home/PaymentDetailsVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "183"
-                  endingLineNumber = "183">
-               </Location>
-               <Location
-                  uuid = "A0C72F2D-CA34-4E68-B6BD-B971DAA66C29 - 9e4eca2098911d60"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.OPPTransaction, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.NSDictionary&gt;, Swift.Optional&lt;Swift.Error&gt;, Swift.Optional&lt;Swift.Int&gt;) -&gt; () in Hamraa_Insurance.PaymentDetailsVC.callPaymentAPI() -&gt; ()"
-                  moduleName = "Hamraa Insurance.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ankitgabani/Documents/2025%20iOS/iOS_Travel-Insurance/Travel%20Insurance/MVC/Controller/home/PaymentDetailsVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "184"
-                  endingLineNumber = "184">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -512,36 +482,6 @@
             endingLineNumber = "212"
             landmarkName = "handleTransactionSubmission(transaction:error:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1C526728-52E7-498C-A605-E18EE21E419E - ab7768caee4e8d8a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hamraa_Insurance.VIAddNewCardVC.presenterURL(url: Foundation.URL) -&gt; ()"
-                  moduleName = "Hamraa Insurance.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ankitgabani/Documents/2025%20iOS/iOS_Travel-Insurance/Travel%20Insurance/VehicleInsurance/TabbarVehicle/VehicleInsuranceProcess/VIAddNewCardVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "212"
-                  endingLineNumber = "212">
-               </Location>
-               <Location
-                  uuid = "1C526728-52E7-498C-A605-E18EE21E419E - 1a673af27ec9a216"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hamraa_Insurance.VIAddNewCardVC.handleTransactionSubmission(transaction: Swift.Optional&lt;__C.OPPTransaction&gt;, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
-                  moduleName = "Hamraa Insurance.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ankitgabani/Documents/2025%20iOS/iOS_Travel-Insurance/Travel%20Insurance/VehicleInsurance/TabbarVehicle/VehicleInsuranceProcess/VIAddNewCardVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "213"
-                  endingLineNumber = "213">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
